@@ -1,3 +1,6 @@
+**This repo has submodules**. Clone with `--recursive` or do `git
+submodule init` then `git submodule update` after cloning.
+
 Test program for SDL3 TLS-related leak on Windows.
 
 Tested using Visual Studio 2019 on Windows 10 22H2 (OS Build
