@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.20...3.31)
+project(sdl3_tls_leak)
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT sdl3_tls_leak)
+option(SDL_SHARED "" OFF)
+option(SDL_STATIC "" ON)
+add_subdirectory(SDL)
+add_executable(sdl3_tls_leak src/sdl3_tls_leak.cpp)
+target_link_libraries(sdl3_tls_leak SDL3::SDL3-static)
