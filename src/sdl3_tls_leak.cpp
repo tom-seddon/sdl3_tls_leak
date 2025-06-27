@@ -12,6 +12,8 @@ static int StartupError(const std::string &what) {
 int main(int argc, char *argv[]) {
     (void)argc, (void)argv;
 
+    //_crtBreakAlloc = 3740;
+
     _CrtSetDbgFlag(_CrtSetDbgFlag(_CRTDBG_REPORT_FLAG) | _CRTDBG_LEAK_CHECK_DF);
 
     if (!SDL_Init(SDL_INIT_AUDIO | SDL_INIT_VIDEO | SDL_INIT_GAMEPAD))
@@ -20,6 +22,8 @@ int main(int argc, char *argv[]) {
     SDL_Window *window = SDL_CreateWindow("sdl3_tls_leak", 1280, 720, SDL_WINDOW_RESIZABLE);
     if (!window)
         return StartupError("SDL_CreateWindow");
+
+    SDL_Delay(500);
 
     SDL_DestroyWindow(window), window = nullptr;
 

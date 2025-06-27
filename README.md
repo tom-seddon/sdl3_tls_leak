@@ -16,6 +16,11 @@ Studio\2019\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\
 	
 Then load `build/sdl3_tls_leak.sln` into VS2019.
 
-Then build Debug x64 and run.
+Build Debug x64.
 
-Note memory leaks in output window.
+Connect USB-type Xbox 360 controller to PC, or connect Xbox Series X
+controller to PC with USB cable.
+
+Run in debugger.
+
+Note (hopefully!) memory leaks in output window.
